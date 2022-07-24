@@ -5,8 +5,11 @@
 }
 body{
     background-color: aqua;
-    /* justify-content: center;
-    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 .clock{
     
@@ -25,6 +28,7 @@ body{
      /* background-color: blue;  */
     text-align: center;
     transform: rotate(var(--rotation));
+    font-size: 20px;
 }
 .clock .number1{ --rotation: 30deg;}
 .clock .number2{ --rotation: 60deg;}
@@ -54,11 +58,24 @@ body{
     transform-origin: bottom;
     z-index: 10;
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
-} 
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 10;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
 
 .clock .hand.second {
     width: 3px;
-    height: 43%;
+    height: 40%;
     background-color: red;
 }
 
@@ -70,7 +87,7 @@ body{
 
 .clock .hand.minute {
     width: 7px;
-    height: 40%;
+    height: 35%;
     background-color: black;
 }
 
