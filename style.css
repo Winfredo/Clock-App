@@ -4,7 +4,8 @@
     /*font-family: font, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 body{
-    background-color: aqua;
+    background-image: url('wallpaper.jpg');
+    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     align-items: center;
