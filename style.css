@@ -65,7 +65,7 @@ body{
     content: '';
     position: absolute;
     background-color: black;
-    z-index: 10;
+    z-index: 12;
     width: 15px;
     height: 15px;
     top: 50%;
